@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using app_tarefas.Data;
 using app_tarefas.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace app_tarefas.Controllers
 {
+    [Authorize]
     public class TarefaController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -20,6 +22,7 @@ namespace app_tarefas.Controllers
         }
 
         // GET: Tarefa
+        [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.Tarefa.Include(t => t.Tipo);

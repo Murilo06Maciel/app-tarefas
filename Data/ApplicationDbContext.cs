@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using app_tarefas.Models;
 
@@ -12,4 +12,6 @@ public class ApplicationDbContext : IdentityDbContext
     }
 
     public DbSet<Tipo> Tipos { get; set; } = null!;
+
+public DbSet<app_tarefas.Models.Tarefa> Tarefa { get; set; } = default!;
 }

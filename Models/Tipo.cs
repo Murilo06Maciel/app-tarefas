@@ -16,5 +16,6 @@ namespace app_tarefas.Models
         [MinLength(2, ErrorMessage = "Mínimo 2 caracteres.")]
         [MaxLength(200, ErrorMessage = "Máximo 200 caracteres.")]
         public string Descricao { get; set; } = null!;
+        public ICollection<Tarefa> Tarefas { get; set; } = new List<Tarefa>();
     }
 }

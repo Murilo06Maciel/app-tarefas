@@ -12,5 +12,5 @@ using app_tarefas.Models;
         {
         }
 
-        public DbSet<app_tarefas.Models.Tipo> Tipo { get; set; } = default!;
+        public DbSet<Tipo> Tipo { get; set; } = default!;
     }
